@@ -41,7 +41,11 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-exports.definitions = require("./lib/definitions");
-exports.lexer = require("./lib/lexer");
-exports.parser = require("./lib/parser");
-exports.decompiler = require("./lib/decompiler");
+define([ "require", "./lib/definitions", "./lib/lexer", "./lib/parser", "./lib/decompiler" ], function( require ) {
+	return {
+		definitions: require("./lib/definitions"),
+		lexer: require("./lib/lexer"),
+		parser: require("./lib/parser"),
+		decompiler: require("./lib/decompiler")
+	};
+});
